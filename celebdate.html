@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Date a celeb</title>
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/celebStyle.js"></script>
+</head>
+<body>
+  <h1>Fill in your information</h1>
+  <form>
+    <label for="nameInput">Your name</label>
+    <input id="nameInput" type="text" name="nameInput"><span id="name_error" class="hidden"> Put in your name</span><br>
+    <label for="ageInput">Age</label>
+    <input id="ageInput" type="text" name="ageInput"><span id="age_error" class="hidden"> Put in your age</span><br>
+    <label for="heightInput">Height in inches</label>
+    <input id="heightInput" type="text" name="heightInput"><span id="height_error" class="hidden"> Put in your height</span><br>
+    <label for="shirtColorInput">The color of your shirt</label>
+    <input id="shirtColorInput" type="text" name="shirtColorInput"><span id="color_error" class="hidden"> Put in your shirt color </span><br>
+    
+    <button type="submit" id="submit_button">Find out who you should date!</button>
+  </form>
+
+  <p id="announce" class="hidden">You should date: </p>
+  <p id="justin" class="hidden">Justin Bieber</p>
+  <p id="rock" class="hidden">The Rock</p>
+  <p id="kanye" class="hidden">Kanye West</p>
+  <p id="error" class="hidden">Please fix the errors!</p>
+</body>
+</html>
