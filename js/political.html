@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Date a celeb</title>
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/celebStyle.js"></script>
+</head>
+<body>
+  <h1>Fill in your information</h1>
+  <form>
+    <label for="babiesInput">What are your thoughts on babies?</label>
+    <input id="babiesInput" type="text" name="nameInput">
+    <span id="name_error" class="hidden"> Thoughts on babies?</span><br>
+    
+    <label for="healthInput">What are your thoughts on healthcare</label>
+    <input id="healthInput" type="text" name="ageInput"><span id="age_error" class="hidden"> Put in health care thoughts?</span><br>
+    <label for="homesInput">What are your thoughts on the homeless?</label>
+    <input id="homesInput" type="text" name="heightInput"><span id="height_error" class="hidden"> Thought on the homeless?</span><br>
+    <label for="ColorInput">Color of your political party?</label>
+    <input id="ColorInput" type="text" name="shirtColorInput"><span id="color_error" class="hidden"> Party color?</span><br>
+    
+    <button type="submit" id="submit_button">Find out who you are politically? </button>
+  </form>
+
+  <p id="announce" class="hidden">You should be a: </p>
+  <p id="liberal" class="hidden">liberal</p>
+  <p id="moderate" class="hidden">moderate</p>
+  <p id="convervatuve" class="hidden">convervatuve</p>
+  <p id="error" class="hidden">Please fix the errors!</p>
+</body>
+</html>
