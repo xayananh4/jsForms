@@ -18,20 +18,37 @@ function getAndSetMadLibValues() {
   document.querySelector("span#exclamation").innerText = exclamationInput;
 }
 
-// this function creates the onsubmit event handler
-// it needs to be called in the window.onload event handler
-function setFormSubmissionEventHandler() {
+window.addEventListener("load", function() {
   let form = document.querySelector("form");
-  form.onsubmit = function(event) {
-    event.preventDefault();
-    getAndSetMadLibValues();
-    document.querySelector("div#story").removeAttribute("class");
-  }
-}
+  // we've accessed our button and story elements at the top level
+  // of the window load event listener to reuse these elements
+  // in multiple locations
+  let resetBtn = document.querySelector("button#reset");
+  let story = document.querySelector("div#story");
 
-window.onload = function() {
-  // inside of the window.onload handler function we only include
-  // the code that we want to run when
-  // the webpage has finished loading all resources
-  setFormSubmissionEventHandler();
-};
+  // the original form submission event listener
+  form.addEventListener("submit", function(event) {
+    getAndSetMadLibValues();
+     // we've updated our code to use the new story variable
+    story.removeAttribute("class");
+    reset.removeAttribute("class");
+    window.alert("Do you need a new computer? Visit www.superextracomputersales.com to find the best deals!");
+
+     // take note that we only need to call event.preventDefault();
+     // once, even though there are 3 different event listeners for the 
+     // form submission event
+    event.preventDefault();
+  });
+
+   // new event listener for click event on reset button to 
+   // reset form values
+  resetBtn.addEventListener("click", function() {
+  story.setAttribute("class", "hidden");
+    document.getElementById("person1Input").value = null;
+    document.getElementById("person2Input").value = null;
+    document.getElementById("animalInput").value = null;
+    document.getElementById("exclamationInput").value = null;
+    document.getElementById("verbInput").value = null;
+    document.getElementById("nounInput").value = null;
+  });
+});

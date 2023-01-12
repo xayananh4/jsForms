@@ -1,3 +1,13 @@
+function startPage(){
+  let bttn = document.getElementById("submit_button");
+  bttn.addEventListener("click", onClick);
+}
+
+function onClick(event){
+  event.preventDefault();
+  chooseDate();
+}
+
 function hideElements(){
 
   document.getElementById("announce").setAttribute("class", "hidden");
@@ -12,19 +22,9 @@ function hideElements(){
 
 }
 
-window.onload = function(){
-  
-  let submitButtonClick = document.getElementById("submit_button");
-  submitButtonClick.onclick = function(event) {
-    event.preventDefault();
-    chooseDate();
-  }
-  
-}
-
 function showError(){
   hideElements();
-  alert('wow');
+  alert('wo3333w');
   document.getElementById("error").setAttribute("class", "unhidden");
 }
 
@@ -63,7 +63,6 @@ function chooseDate(){
       //justin
       document.getElementById("justin").setAttribute("class", "visible");
     }
-  }
-
-  
+  }  
 }
+window.addEventListener("load", startPage);
