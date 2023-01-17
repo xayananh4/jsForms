@@ -48,7 +48,8 @@ function chooseDate(){
     if(!color){
       document.getElementById("color_error").setAttribute("class", "unhidden");
     }
-  }else{
+  }
+  else{
     hideElements();
     document.getElementById("announce").setAttribute("class", "visible");
 
@@ -65,4 +66,7 @@ function chooseDate(){
     }
   }  
 }
+
+
+
 window.addEventListener("load", startPage);

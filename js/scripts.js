@@ -32,8 +32,6 @@ window.addEventListener("load", function() {
      // we've updated our code to use the new story variable
     story.removeAttribute("class");
     reset.removeAttribute("class");
-    window.alert("Do you need a new computer? Visit www.superextracomputersales.com to find the best deals!");
-
      // take note that we only need to call event.preventDefault();
      // once, even though there are 3 different event listeners for the 
      // form submission event
